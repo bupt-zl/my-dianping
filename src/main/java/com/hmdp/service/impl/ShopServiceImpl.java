@@ -26,7 +26,7 @@ import static com.hmdp.utils.RedisConstants.*;
  * </p>
  *
  * @author 龙哥
- * @since 2024-06-12
+ * @since 2025-01-22
  */
 @Service
 public class ShopServiceImpl extends ServiceImpl<ShopMapper, Shop> implements IShopService {

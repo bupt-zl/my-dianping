@@ -21,7 +21,7 @@ import static com.hmdp.utils.RedisConstants.SHOP_TYPE_LIST;
  * </p>
  *
  * @author 龙哥
- * @since 2024-06-12
+ * @since 2025-01-22
  */
 @Service
 public class ShopTypeServiceImpl extends ServiceImpl<ShopTypeMapper, ShopType> implements IShopTypeService {

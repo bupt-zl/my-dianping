@@ -36,13 +36,13 @@ public class RefreshLoginInterceptor implements HandlerInterceptor {
            return true;
         }
 
-        // 5. 将查询到的Hash数据转为UserDTO对象
+        // 4. 将查询到的Hash数据转为UserDTO对象
         UserDTO userDTO = BeanUtil.fillBeanWithMap(userMap, new UserDTO(), false);
-        // 6. 存在，保存用户信息到ThreadLocal
+        // 5. 存在，保存用户信息到ThreadLocal
         UserHolder.saveUser(userDTO);
-        // 7. 刷新token有效期
+        // 6. 刷新token有效期
         stringRedisTemplate.expire(LOGIN_USER_KEY+ token, LOGIN_USER_TTL, TimeUnit.MINUTES);
-        // 8. 放行
+        // 7. 放行
         return true;
     }
 

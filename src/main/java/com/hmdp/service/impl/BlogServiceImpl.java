@@ -32,7 +32,7 @@ import java.util.stream.Collectors;
  * </p>
  *
  * @author 龙哥
- * @since 2024-08-13
+ * @since 2025-01-13
  */
 @Service
 public class BlogServiceImpl extends ServiceImpl<BlogMapper, Blog> implements IBlogService {
@@ -86,7 +86,7 @@ public class BlogServiceImpl extends ServiceImpl<BlogMapper, Blog> implements IB
         Double score = stringRedisTemplate.opsForZSet().score(key, userId.toString());
         blog.setIsLike(score != null);
     }
-
+    // 实现点赞/取消点赞功能
     @Override
     public Result likeBlog(Long id) {
         // 1. 获取登录用户
@@ -110,7 +110,7 @@ public class BlogServiceImpl extends ServiceImpl<BlogMapper, Blog> implements IB
         }
         return Result.ok();
     }
-
+    // 查询点赞排行前五的用户
     @Override
     public Result queryBlogLikes(Long id) {
         String key = "blog:liked" + id;

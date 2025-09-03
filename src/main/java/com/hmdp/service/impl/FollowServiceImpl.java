@@ -24,7 +24,7 @@ import java.util.stream.Collectors;
  * </p>
  *
  * @author 龙哥
- * @since 2024-08-13
+ * @since 2025-02-13
  */
 @Service
 public class FollowServiceImpl extends ServiceImpl<FollowMapper, Follow> implements IFollowService {
@@ -35,6 +35,8 @@ public class FollowServiceImpl extends ServiceImpl<FollowMapper, Follow> impleme
     @Resource
     private UserServiceImpl userService;
 
+
+    // 关注或者取关
     @Override
     public Result follow(Long followUserId, Boolean isFollow) {
         // 获取登录用户
@@ -74,6 +76,7 @@ public class FollowServiceImpl extends ServiceImpl<FollowMapper, Follow> impleme
         return Result.ok(count > 0);
     }
 
+    // 共同关注的集合
     @Override
     public Result followCommons(Long id) {
         // 1. 获取当前用户
