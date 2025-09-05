@@ -17,10 +17,6 @@ import javax.annotation.Resource;
 import javax.servlet.http.HttpSession;
 
 /**
- * <p>
- * 前端控制器
- * </p>
- *
  * @author 张龙
  * @since 2025-01-22
  */
