@@ -89,9 +89,6 @@ public class VoucherOrderServiceImpl extends ServiceImpl<VoucherOrderMapper, Vou
         }
     }
 
-
-
-
     private void handleVoucherOrder(VoucherOrder voucherOrder) {
         //1.获取用户
         Long userId = voucherOrder.getUserId();

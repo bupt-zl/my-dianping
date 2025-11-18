@@ -9,10 +9,6 @@ import org.springframework.web.bind.annotation.*;
 import javax.annotation.Resource;
 
 /**
- * <p>
- *  前端控制器
- * </p>
- *
  * @author 龙哥
  * @since 2025-01-22
  */

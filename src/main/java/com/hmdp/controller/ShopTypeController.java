@@ -12,10 +12,6 @@ import javax.annotation.Resource;
 import java.util.List;
 
 /**
- * <p>
- * 前端控制器
- * </p>
- *
  * @author 龙哥
  * @since 2025-01-22
  */

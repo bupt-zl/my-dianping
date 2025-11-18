@@ -45,7 +45,7 @@ public class UserController {
      * @param loginForm 登录参数，包含手机号、验证码；或者手机号、密码
      */
     @PostMapping("/login")
-    public Result login(@RequestBody LoginFormDTO loginForm, HttpSession session){
+    public Result login(@RequestBody LoginFormDTO loginForm, HttpSession session) {
         // TODO 实现登录功能
         return userService.login(loginForm, session);
     }
@@ -68,7 +68,7 @@ public class UserController {
     }
 
     @GetMapping("/info/{id}")
-    public Result info(@PathVariable("id") Long userId){
+    public Result info(@PathVariable("id") Long userId) {
         // 查询详情
         UserInfo info = userInfoService.getById(userId);
         if (info == null) {
